@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover">
+<title>Panel Kontrol</title>
+<script src="https://telegram.org/js/telegram-web-app.js"></script>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="cahaya cahaya-a"></div>
+<div class="cahaya cahaya-b"></div>
+
+<!-- Layar kalau dibuka di luar Telegram -->
+<section id="layar-luar" class="layar-luar sembunyi">
+  <div class="luar-kartu">
+    <div class="luar-emoji">🛰️</div>
+    <h1>Buka dari Telegram ya</h1>
+    <p>Panel ini cuma mau kebuka lewat tombol menu di bot Telegram kamu. Dari browser biasa dia ngambek — demi keamanan juga sih.</p>
+  </div>
+</section>
+
+<!-- Layar muat / galat -->
+<section id="layar-status" class="layar-status sembunyi">
+  <div class="putar"></div>
+  <p id="teks-status">Nyambung ke server…</p>
+  <button id="tombol-ulang" class="tombol-ulang sembunyi">Coba lagi</button>
+</section>
+
+<!-- Panel utama -->
+<main id="panel" class="sembunyi">
+  <header class="kepala">
+    <div class="kepala-kiri">
+      <div class="kepala-ikon">🖥️</div>
+      <div>
+        <h1 id="nama-box">server</h1>
+        <p class="kepala-sub">Panel kontrol sandbox</p>
+      </div>
+    </div>
+    <div class="kepala-kanan">
+      <span class="titik-hidup"></span>
+      <span id="pil-beban" class="pil">beban —</span>
+    </div>
+  </header>
+
+  <section class="kartu">
+    <div class="kartu-judul"><span>🫀 Kesehatan Mesin</span><span id="nyala-box" class="kartu-judul-kanan">—</span></div>
+
+    <div class="baris-bar">
+      <div class="bar-label"><span>CPU</span><span id="teks-cpu" class="bar-nilai">—</span></div>
+      <div class="bar"><div id="bar-cpu" class="bar-isi hijau"></div></div>
+    </div>
+
+    <div class="baris-bar">
+      <div class="bar-label"><span>RAM</span><span id="teks-ram" class="bar-nilai">—</span></div>
+      <div class="bar"><div id="bar-ram" class="bar-isi hijau"></div></div>
+    </div>
+
+    <div class="baris-bar">
+      <div class="bar-label"><span>Disk</span><span id="teks-disk" class="bar-nilai">—</span></div>
+      <div class="bar"><div id="bar-disk" class="bar-isi hijau"></div></div>
+    </div>
+  </section>
+
+  <section>
+    <div class="seksi-judul">🤖 Layanan</div>
+    <div id="daftar-app"></div>
+    <p id="app-kosong" class="kosong sembunyi">Belum ada layanan yang jalan. Sepi banget di sini.</p>
+  </section>
+
+  <footer class="kaki">
+    <span id="segar-terakhir">—</span>
+    <span>• segar otomatis tiap 5 detik</span>
+  </footer>
+</main>
+
+<div id="roti" class="roti sembunyi"></div>
+
+<script src="app.js"></script>
+</body>
+</html>
