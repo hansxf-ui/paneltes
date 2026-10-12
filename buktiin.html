@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Buktiin Panel — HP vs Desktop</title>
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    background: #07080f; color: #eef1ff;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+    padding: 28px 18px 48px;
+  }
+  h1 { font-size: 20px; margin-bottom: 6px; }
+  .sub { color: #9aa3c7; font-size: 13px; margin-bottom: 30px; }
+  .bingkai { margin-bottom: 40px; }
+  .label {
+    display: inline-block; font-size: 13px; font-weight: 700;
+    background: rgba(255,255,255,.07); border: 1px solid rgba(255,255,255,.12);
+    padding: 5px 12px; border-radius: 999px; margin-bottom: 12px;
+  }
+  iframe {
+    display: block; border: 1px solid rgba(255,255,255,.16);
+    border-radius: 14px; background: #0b0e1a;
+  }
+  .bungkus-desktop { width: 640px; height: 400px; overflow: hidden; border-radius: 14px; }
+  .bungkus-desktop iframe {
+    width: 1280px; height: 800px; border-radius: 0;
+    transform: scale(.5); transform-origin: top left;
+  }
+</style>
+</head>
+<body>
+<h1>🛰️ Buktiin Panel Mini App</h1>
+<p class="sub">Halaman bantuan cek visual — panel dimuat dua kali (mode mock) dalam ukuran HP dan desktop.</p>
+
+<div class="bingkai">
+  <span class="label">📱 HP 390px</span>
+  <iframe src="index.html?mock=1" width="390" height="844" title="Panel ukuran HP"></iframe>
+</div>
+
+<div class="bingkai">
+  <span class="label">🖥️ Desktop 1280px (diskalakan 50%)</span>
+  <div class="bungkus-desktop">
+    <iframe src="index.html?mock=1" width="1280" height="800" title="Panel ukuran desktop"></iframe>
+  </div>
+</div>
+
+</body>
+</html>
