@@ -56,7 +56,7 @@ main, .layar-status, .layar-luar {
   margin-bottom: 16px; animation: masuk .5s ease both;
 }
 .kepala-kiri { display: flex; align-items: center; gap: 12px; min-width: 0; flex: 1; }
-.kepala-kiri > div { flex: 1; min-width: 0; }
+.kepala-kiri > .kepala-teks { flex: 1; min-width: 0; }
 .kepala-ikon {
   font-size: 26px; width: 48px; height: 48px; flex: 0 0 auto;
   display: flex; align-items: center; justify-content: center;
